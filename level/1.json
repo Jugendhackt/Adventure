@@ -127,7 +127,16 @@
       "collision": "died",
       "x": 49,
       "y": 25,
-      "w": 9,
+      "w": 5,
+      "h": 1
+    },
+    {
+      "name": "spike",
+      "draw": "repeat",
+      "collision": "died",
+      "x": 57,
+      "y": 25,
+      "w": 1,
       "h": 1
     },
     {
@@ -244,9 +253,39 @@
       "name": "bolt01",
       "draw": "fill",
       "collision": "collectMusic",
-      "musicID": 1,
+      "musicID": 0,
       "x": 65,
       "y": 22,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "name": "bolt02",
+      "draw": "fill",
+      "collision": "collectMusic",
+      "musicID": 1,
+      "x": 55,
+      "y": 25,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "name": "bolt03",
+      "draw": "fill",
+      "collision": "collectMusic",
+      "musicID": 2,
+      "x": 60,
+      "y": 7,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "name": "bolt04",
+      "draw": "fill",
+      "collision": "collectMusic",
+      "musicID": 3,
+      "x": 70,
+      "y": 3,
       "w": 1,
       "h": 1
     },
