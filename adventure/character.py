@@ -59,6 +59,8 @@ class Character:
 
     def handle(self, inputs):
         self.status.handle(self, inputs)
+        if inputs[pygame.K_o]:
+            print("x:",int(self.x), "xb:", int(self.x/32),"y:",int(self.y),"yb:",int(self.y/32))
         self.vx = 0
         if inputs[pygame.K_a]:
             self.vx = -MOV_SPEED
