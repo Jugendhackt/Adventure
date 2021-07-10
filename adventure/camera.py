@@ -79,6 +79,7 @@ class Camera:
         scaled_size = block_size / self.scale
         bx = int(((mx - self.offset_x) + self.rect.x / self.scale) / scaled_size)
         by = int(((my - self.offset_y) + self.rect.y / self.scale) / scaled_size)
+        print("MousePos X:{} Y:{}".format(bx,by))
         return bx, by
 
     def get_camere_block(self):
