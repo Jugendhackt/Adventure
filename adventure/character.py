@@ -155,12 +155,16 @@ class Character:
             if block["collision"] == "died":
                 adventure.default.restart()
             elif block["collision"] == "jump":
-                self.sound_master.play_sound()
-
                 self.status = StatusDJump()
                 self.sprite = SPRITE_DJUMP
                 self.djump = False
                 self.vy = -600
+            elif block["collision"] == "collectMusic":
+                tempSoundObject = adventure.sound.Sound(1,"C4",0.5)
+                self.sound_master.play_sound(tempSoundObject)
+                del adventure.default.world[ block["y"] ] [block["x"]]
+                del adventure.default.blocks[b_id]
+
         if "transport" in block:
             adventure.default.load_level(block["transport"])
 
@@ -246,7 +250,6 @@ class StatusJump:
             if b is not None:
                 self.target = block
                 break
-
 
 class StatusFall:
     name = "fall"

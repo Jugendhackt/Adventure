@@ -241,6 +241,16 @@
       "h": 1
     },
     {
+      "name": "bolt01",
+      "draw": "fill",
+      "collision": "collectMusic",
+      "musicID": 1,
+      "x": 65,
+      "y": 22,
+      "w": 1,
+      "h": 1
+    },
+    {
       "name": "t2",
       "draw": "repeat",
       "x": 70,
