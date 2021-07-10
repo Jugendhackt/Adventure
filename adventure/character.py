@@ -165,7 +165,7 @@ class StatusIdle:
 
     def handle(self, instance, inputs=None):
         if inputs is not None:
-            if inputs[pygame.K_w]:
+            if inputs[pygame.K_w] or inputs[pygame.K_SPACE]:
                 instance.status = StatusJump()
                 instance.sprite = SPRITE_JUMP
                 instance.vy = -JUMP_POWER
@@ -200,7 +200,7 @@ class StatusJump:
     release = False
     def handle(self, instance, inputs=None):
         if inputs is not None:
-            if inputs[pygame.K_w]:
+            if inputs[pygame.K_w] or inputs[pygame.K_SPACE]:
                 if self.release and instance.djump:
                     instance.status = StatusDJump()
                     instance.sprite = SPRITE_DJUMP
@@ -245,7 +245,7 @@ class StatusFall:
     target = None
     def handle(self, instance, inputs=None):
         if inputs is not None:
-            if inputs[pygame.K_w] and instance.djump:
+            if (inputs[pygame.K_w] or inputs[pygame.K_SPACE]) and instance.djump:
                 instance.status = StatusDJump()
                 instance.sprite = SPRITE_DJUMP
                 instance.vy = -DJUMP_POWER
@@ -284,7 +284,7 @@ class StatusRun:
 
     def handle(self, instance, inputs=None):
         if inputs is not None:
-            if inputs[pygame.K_w]:
+            if (inputs[pygame.K_w] or inputs[pygame.K_SPACE]) or inputs[pygame.K_SPACE]:
                 instance.status = StatusJump()
                 instance.sprite = SPRITE_JUMP
                 instance.vy = -JUMP_POWER
