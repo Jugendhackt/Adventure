@@ -35,3 +35,5 @@ F8 => switch to debug mode
 https://pixel-frog.itch.io/pixel-adventure-1
 
 https://opengameart.org/
+- http://opengameart.org/content/dungeon-crawl-32x32-tiles
+- http://code.google.com/p/crawl-tiles/
