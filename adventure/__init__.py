@@ -2,6 +2,7 @@ import json
 import random
 import pygame
 import os
+from adventure import sound
 from adventure import clock
 from adventure import camera
 from adventure import texture
@@ -53,6 +54,8 @@ class Adventure:
 
     start_point = None
 
+    sound_master = None
+
     # tmp for test
     # ------------------------------
     dir = 0
@@ -93,6 +96,9 @@ class Adventure:
             # ui
             # ---------------------------------------------------------------------
             self.ui = pygame.Surface((window_width, window_height))
+
+            # sound
+            self.sound_master = sound.SoundMaster()
 
             # level
             # ---------------------------------------------------------------------

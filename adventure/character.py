@@ -44,8 +44,6 @@ class Character:
 
     djump = True
 
-    sound_master = None
-
     def __init__(self, x, y, w, h):
         self.x = x
         self.y = y
@@ -54,7 +52,6 @@ class Character:
         self.status = StatusIdle()
         self.sprite = SPRITE_IDLE
         self.last_test = LEFT_BLOCK
-        self.sound_master = adventure.sound.SoundMaster()
 
 
     def handle(self, inputs):
@@ -161,7 +158,7 @@ class Character:
                 self.vy = -600
             elif block["collision"] == "collectMusic":
                 tempSoundObject = adventure.sound.Sound(1,"C4",0.5)
-                self.sound_master.play_sound(tempSoundObject)
+                adventure.default.sound_master.play_sound(tempSoundObject)
                 del adventure.default.world[ block["y"] ] [block["x"]]
                 del adventure.default.blocks[b_id]
 
