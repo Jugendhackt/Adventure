@@ -1,10 +1,10 @@
 {
-  "worldCol":   25,
-  "worldRow":   100,
-  "blockSize":    32,
-  "scale":        0.8,
+  "worldCol": 25,
+  "worldRow": 100,
+  "blockSize": 32,
+  "scale": 0.8,
   "blocks": [
-     {
+    {
       "name": "t1",
       "draw": "repeat",
       "x": 5,
@@ -14,33 +14,32 @@
       "prob": 30,
       "gen": [
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass1"
+          "x": 0,
+          "y": -1,
+          "key": "grass1"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass2"
+          "x": 0,
+          "y": -1,
+          "key": "grass2"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "flor1"
-        }
-        ,{
-        "x": 0,
-        "y": -1,
-        "key": "flor2"
+          "x": 0,
+          "y": -1,
+          "key": "flor1"
         },
         {
-        "x": 0,
-        "y": -2,
-        "key": "start"
+          "x": 0,
+          "y": -1,
+          "key": "flor2"
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "key": "start"
         }
       ]
-    }
-    ,
+    },
     {
       "name": "t1",
       "draw": "repeat",
@@ -51,28 +50,28 @@
       "h": 1,
       "gen": [
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass1"
+          "x": 0,
+          "y": -1,
+          "key": "grass1"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass2"
+          "x": 0,
+          "y": -1,
+          "key": "grass2"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "flor1"
-        }
-        ,{
-        "x": 0,
-        "y": -1,
-        "key": "flor2"
+          "x": 0,
+          "y": -1,
+          "key": "flor1"
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "key": "flor2"
         }
       ]
     },
-     {
+    {
       "name": "t1",
       "draw": "repeat",
       "prob": 30,
@@ -82,28 +81,28 @@
       "h": 1,
       "gen": [
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass1"
+          "x": 0,
+          "y": -1,
+          "key": "grass1"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass2"
+          "x": 0,
+          "y": -1,
+          "key": "grass2"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "flor1"
-        }
-        ,{
-        "x": 0,
-        "y": -1,
-        "key": "flor2"
+          "x": 0,
+          "y": -1,
+          "key": "flor1"
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "key": "flor2"
         }
       ]
     },
-     {
+    {
       "name": "t1",
       "draw": "repeat",
       "prob": 30,
@@ -113,28 +112,28 @@
       "h": 1,
       "gen": [
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass1"
+          "x": 0,
+          "y": -1,
+          "key": "grass1"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass2"
+          "x": 0,
+          "y": -1,
+          "key": "grass2"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "flor1"
-        }
-        ,{
-        "x": 0,
-        "y": -1,
-        "key": "flor2"
+          "x": 0,
+          "y": -1,
+          "key": "flor1"
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "key": "flor2"
         }
       ]
     },
-     {
+    {
       "name": "t1",
       "draw": "repeat",
       "prob": 100,
@@ -144,9 +143,9 @@
       "h": 1,
       "gen": [
         {
-        "x": 0,
-        "y": -1,
-        "key": "flor1"
+          "x": 0,
+          "y": -1,
+          "key": "flor1"
         }
       ]
     }
@@ -157,17 +156,17 @@
       "y": 0.01,
       "key": "sun"
     },
-     {
+    {
       "x": 0.55,
       "y": 0.03,
       "key": "cloud1"
     },
-     {
+    {
       "x": 0.05,
       "y": 0.04,
       "key": "cloud2"
     },
-     {
+    {
       "x": 0.27,
       "y": 0.06,
       "key": "cloud3"

@@ -1,10 +1,10 @@
 {
-  "worldCol":   75,
-  "worldRow":   30,
-  "blockSize":    32,
-  "scale":        0.8,
+  "worldCol": 75,
+  "worldRow": 30,
+  "blockSize": 32,
+  "scale": 0.8,
   "blocks": [
-     {
+    {
       "name": "t1",
       "draw": "repeat",
       "x": 0,
@@ -14,24 +14,24 @@
       "prob": 30,
       "gen": [
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass1"
+          "x": 0,
+          "y": -1,
+          "key": "grass1"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "grass2"
+          "x": 0,
+          "y": -1,
+          "key": "grass2"
         },
         {
-        "x": 0,
-        "y": -1,
-        "key": "flor1"
-        }
-        ,{
-        "x": 0,
-        "y": -1,
-        "key": "flor2"
+          "x": 0,
+          "y": -1,
+          "key": "flor1"
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "key": "flor2"
         }
       ]
     },
@@ -43,7 +43,7 @@
       "w": 100,
       "h": 3
     },
-     {
+    {
       "name": "transparent",
       "draw": "repeat",
       "collision": "jump",
@@ -52,16 +52,16 @@
       "y": 26,
       "w": 1,
       "h": 1,
-       "prob": 101,
-       "gen":[
-         {
-           "x": 0,
-           "y": -1,
-           "key": "fan"
-         }
-       ]
+      "prob": 101,
+      "gen": [
+        {
+          "x": 0,
+          "y": -1,
+          "key": "fan"
+        }
+      ]
     },
-     {
+    {
       "name": "transparent",
       "draw": "repeat",
       "collision": "jump",
@@ -70,22 +70,22 @@
       "y": 26,
       "w": 1,
       "h": 1,
-       "prob": 101,
-       "gen":[
-         {
-           "x": 0,
-           "y": -1,
-           "key": "fan"
-         }
-       ]
+      "prob": 101,
+      "gen": [
+        {
+          "x": 0,
+          "y": -1,
+          "key": "fan"
+        }
+      ]
     },
     {
-        "name": "t2",
-        "draw": "repeat",
-        "x": 10,
-        "y": 20,
-        "w": 1,
-        "h": 6
+      "name": "t2",
+      "draw": "repeat",
+      "x": 10,
+      "y": 20,
+      "w": 1,
+      "h": 6
     },
     {
       "name": "t2",
@@ -95,7 +95,7 @@
       "w": 7,
       "h": 1
     },
-     {
+    {
       "name": "spike",
       "draw": "repeat",
       "collision": "died",
@@ -113,7 +113,7 @@
       "w": 7,
       "h": 1
     },
-     {
+    {
       "name": "t2",
       "draw": "repeat",
       "x": 49,
@@ -121,7 +121,7 @@
       "w": 9,
       "h": 1
     },
-     {
+    {
       "name": "spike",
       "draw": "repeat",
       "collision": "died",
@@ -130,7 +130,7 @@
       "w": 9,
       "h": 1
     },
-     {
+    {
       "name": "spike",
       "draw": "repeat",
       "collision": "died",
@@ -156,8 +156,7 @@
       "w": 1,
       "h": 26
     },
-
-     {
+    {
       "name": "t2",
       "draw": "repeat",
       "x": 64,
@@ -165,8 +164,7 @@
       "w": 4,
       "h": 1
     },
-
-     {
+    {
       "name": "spike",
       "draw": "fill",
       "collision": "died",
@@ -175,7 +173,7 @@
       "w": 1,
       "h": 1
     },
-     {
+    {
       "name": "spike",
       "draw": "repeat",
       "collision": "died",
@@ -184,7 +182,7 @@
       "w": 1,
       "h": 1
     },
-      {
+    {
       "name": "t2",
       "draw": "repeat",
       "x": 55,
@@ -192,8 +190,7 @@
       "w": 4,
       "h": 1
     },
-
-     {
+    {
       "name": "spike",
       "draw": "fill",
       "collision": "died",
@@ -202,7 +199,7 @@
       "w": 1,
       "h": 1
     },
-     {
+    {
       "name": "spike",
       "draw": "fill",
       "collision": "died",
@@ -211,7 +208,7 @@
       "w": 1,
       "h": 1
     },
-     {
+    {
       "name": "t2",
       "draw": "repeat",
       "x": 62,
@@ -235,7 +232,7 @@
       "w": 1,
       "h": 1
     },
-     {
+    {
       "name": "t2",
       "draw": "fill",
       "x": 70,
@@ -243,7 +240,7 @@
       "w": 1,
       "h": 1
     },
-     {
+    {
       "name": "t2",
       "draw": "repeat",
       "x": 70,
@@ -251,7 +248,6 @@
       "w": 1,
       "h": 2
     },
-
     {
       "name": "t1",
       "draw": "fill",
@@ -261,14 +257,14 @@
       "w": 1,
       "h": 1,
       "prob": 101,
-      "gen":
-      [{
-        "x":  0,
-        "y": -2,
-        "key": "teleport"
-      }]
+      "gen": [
+        {
+          "x": 0,
+          "y": -2,
+          "key": "teleport"
+        }
+      ]
     }
-
   ],
   "camera_background": [
     {
@@ -276,17 +272,17 @@
       "y": 0.01,
       "key": "sun"
     },
-     {
+    {
       "x": 0.55,
       "y": 0.03,
       "key": "cloud1"
     },
-     {
+    {
       "x": 0.05,
       "y": 0.04,
       "key": "cloud2"
     },
-     {
+    {
       "x": 0.27,
       "y": 0.06,
       "key": "cloud3"
