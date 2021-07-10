@@ -15,7 +15,13 @@ class SoundMaster:
         self.player.open_stream()
 
     @threaded
-    def play_sound(self):
+    def play_sound(self, volume, note, dauer):
         print("beep")
-        synthesizer = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
-        self.player.play_wave(synthesizer.generate_constant_wave(440.0, 0.5))
+        synthesizer = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=volume, use_osc2=False)
+        self.player.play_wave(synthesizer.generate_constant_wave(note, dauer))
+
+if __name__ == "__main__":
+    sm = SoundMaster()
+
+    sm.play_sound(0.5, "E4", 0.5)
+    sm.play_sound(0.5, "C4", 0.5)
