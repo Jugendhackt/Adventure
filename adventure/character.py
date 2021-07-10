@@ -157,8 +157,8 @@ class Character:
                 self.djump = False
                 self.vy = -600
             elif block["collision"] == "collectMusic":
-                tempSoundObject = adventure.sound.Sound(1,"C4",0.5)
-                adventure.default.sound_master.play_sound(tempSoundObject)
+                adventure.default.sound_master.add_rhythm_beat(block["musicID"])
+
                 del adventure.default.world[ block["y"] ] [block["x"]]
                 del adventure.default.blocks[b_id]
 

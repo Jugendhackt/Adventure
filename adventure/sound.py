@@ -19,32 +19,43 @@ class Sound:
     duration: float
     waveform: Waveform = Waveform.sine
 
+sounds = [
+    Sound(1, "C4", 0.5),
+    Sound(0.5, "G3", 0.5),
+    Sound(1, "B3", 0.25),
+    Sound(0.5, "C4", 0.5),
+]
+
 class SoundMaster:
     player = None
-    beat1 = None
-    beat2 = None
-    beat3 = None
-    beat4 = None
+    beats: list[Sound] = [None, None, None, None]
 
     def __init__(self):
         self.player = Player()
         self.player.open_stream()
 
-    def set_rhythm(self, beat1, beat2, beat3, beat4):
-        self.beat1 = beat1
-        self.beat2 = beat2
-        self.beat3 = beat3
-        self.beat4 = beat4
+    beat_delta = 0.5
+    collected_delta = 0.5
+    current_beat = 0
+
+    def update(self, delay: float):
+        self.collected_delta += delay
+        if self.collected_delta > self.beat_delta:
+            self.current_beat += int(self.collected_delta/self.beat_delta)
+            self.current_beat %= len(self.beats)
+            self.play_beat(self.current_beat)
+            self.collected_delta %= self.beat_delta
+
+
+    def add_rhythm_beat(self, n):
+        self.beats[n] = sounds[n]
+
+    def set_rhythm_beat(self, n, sound):
+        self.beats[n] = sound
 
     def play_beat(self, n):
-        if n == 1 and self.beat1:
-            self.play_sound(self.beat1)
-        elif n == 2 and self.beat2:
-            self.play_sound(self.beat2)
-        elif n == 3 and self.beat3:
-            self.play_sound(self.beat3)
-        elif n == 4 and self.beat4:
-            self.play_sound(self.beat4)
+        if n >= 0 and n <= 3 and self.beats[n]:
+            self.play_sound(self.beats[n])
 
     @threaded
     def play_sound(self, sound: Sound):
@@ -54,15 +65,13 @@ class SoundMaster:
 if __name__ == "__main__":
     sm = SoundMaster()
 
-    sm.set_rhythm(
-                Sound(1, "C4", 0.5),
-                Sound(0.5, "G3", 0.5),
-                Sound(1, "B3", 0.25),
-                Sound(0.5, "C4", 0.5),
-            )
+    sm.set_rhythm_beat(0, sounds[0])
+    sm.set_rhythm_beat(1, sounds[1])
+    sm.set_rhythm_beat(2, sounds[2])
+    sm.set_rhythm_beat(3, sounds[3])
 
-    for i in range(5):
-        for i in range(1,5):
-            sm.play_beat(i)
+    for t in range(5):
+        for b in range(4):
+            sm.play_beat(b)
             time.sleep(0.5)
 

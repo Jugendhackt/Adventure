@@ -161,6 +161,8 @@ class Adventure:
             self.ch.update(self.delay)
             self.ch.draw(self.canvas)
 
+            self.sound_master.update(self.delay)
+
             # ------ debug ------ #
             if self.debug:
                 self.default_camera.draw_camera_gird(self.canvas)
