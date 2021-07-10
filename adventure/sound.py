@@ -19,9 +19,6 @@ class Sound:
     duration: float
     waveform: Waveform = Waveform.sine
 
-    def total_cost(self) -> float:
-        return self.unit_price * self.quantity_on_hand
-
 class SoundMaster:
     player = None
     beat1 = None
