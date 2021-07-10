@@ -1,6 +1,6 @@
 # Adventure
 
-Simple 2D platform-game![1](https://github.com/LucaXiang/Adventure/blob/master/image/1.png)
+Simple 2D platform-game with the task to complete the melody![1](https://github.com/LucaXiang/Adventure/blob/master/image/1.png)
 
 ![2](https://github.com/LucaXiang/Adventure/blob/master/image/2.png)
 
@@ -25,6 +25,8 @@ W => Jump
 A => Left
 
 D => Right
+
+O => Print player-coords in console
 
 R => Restart
 
