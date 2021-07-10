@@ -58,9 +58,9 @@ if __name__ == "__main__":
     sm = SoundMaster()
 
     sm.set_rhythm(
-                Sound(0.5, "E4", 0.5),
-                Sound(0.5, "C4", 0.5),
-                None,
+                Sound(1, "C4", 0.5),
+                Sound(0.5, "G3", 0.5),
+                Sound(1, "B3", 0.25),
                 Sound(0.5, "C4", 0.5),
             )
 
