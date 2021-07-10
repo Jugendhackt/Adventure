@@ -1,5 +1,6 @@
 import pygame
 import adventure
+import adventure.sound
 
 
 LEFT_BLOCK = [[1, 0]]
@@ -43,6 +44,8 @@ class Character:
 
     djump = True
 
+    sound_master = None
+
     def __init__(self, x, y, w, h):
         self.x = x
         self.y = y
@@ -51,6 +54,7 @@ class Character:
         self.status = StatusIdle()
         self.sprite = SPRITE_IDLE
         self.last_test = LEFT_BLOCK
+        self.sound_master = adventure.sound.SoundMaster()
 
 
     def handle(self, inputs):
@@ -149,6 +153,8 @@ class Character:
             if block["collision"] == "died":
                 adventure.default.restart()
             elif block["collision"] == "jump":
+                self.sound_master.play_sound()
+
                 self.status = StatusDJump()
                 self.sprite = SPRITE_DJUMP
                 self.djump = False
