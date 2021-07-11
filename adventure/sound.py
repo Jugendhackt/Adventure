@@ -4,12 +4,6 @@ import numpy as np
 
 from synthesizer import Player, Synthesizer, Waveform
 
-# For debug
-import sys
-np.set_printoptions(threshold=sys.maxsize)
-
-
-
 def threaded(fn):
     def wrapper(*args, **kwargs):
         thread = threading.Thread(target=fn, args=args, kwargs=kwargs)
@@ -75,7 +69,6 @@ class SoundMaster:
             envScale[len(envScale)-startingpart+i]*= (startingpart-float(i))/startingpart
 
         sound_wave *= envScale
-        print(sound_wave)
         self.player.play_wave(sound_wave)
 
 if __name__ == "__main__":
