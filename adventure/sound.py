@@ -39,17 +39,38 @@ class SoundMaster:
     collected_delta = 0.5
     current_beat = 0
 
+    first_beat_on = -1
+
     def update(self, delay: float):
         self.collected_delta += delay
         if self.collected_delta > self.beat_delta:
-            self.current_beat += int(self.collected_delta/self.beat_delta)
-            self.current_beat %= len(self.beats)
+            if self.first_beat_on != -1:
+                self.current_beat = self.first_beat_on
+                self.first_beat_on = -1
+            else:
+                self.current_beat += int(self.collected_delta/self.beat_delta)
+                self.current_beat %= len(self.beats)
             self.play_beat(self.current_beat)
             self.collected_delta %= self.beat_delta
 
 
     def add_rhythm_beat(self, n):
+        if self.beats[n]:
+            return
         self.beats[n] = sounds[n]
+
+        # if only one beat exists now,
+        # find index of first beat
+        one_found = False
+        index = -1
+        for i in range(len(self.beats)):
+            if self.beats[i]:
+                if one_found:
+                    return
+                one_found = True
+                index = i
+        if one_found:
+            self.first_beat_on = index
 
     def set_rhythm_beat(self, n, sound):
         self.beats[n] = sound
