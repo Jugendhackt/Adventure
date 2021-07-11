@@ -11,7 +11,7 @@ from bintrees import rbtree
 
 FULL_SCREEN_FLAG = pygame.FULLSCREEN | pygame.HWSURFACE | pygame.DOUBLEBUF;
 
-BGCOLOR = (54, 143, 203)
+BGCOLOR = (20, 20, 20)
 GRAVITY = 800
 
 
