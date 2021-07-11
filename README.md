@@ -6,21 +6,32 @@ Simple 2D platform-game with the task to complete the melody![1](https://github.
 
 ![3](https://github.com/LucaXiang/Adventure/blob/master/image/3.png)
 
-## Library
+## Libraries
 
-[pygame](https://pypi.org/project/pygame/) 1.9.6
+*as in requirements.txt*
 
-[bintrees](https://pypi.org/project/bintrees/) 2.1.0
+[pygame](https://pypi.org/project/pygame/) 2.0.1
 
-## How to start
+[pyaudio](https://pypi.org/project/PyAudio/) 0.2.11
 
->pip install pygame bintrees
->
->python main.py
+[bintrees](https://pypi.org/project/bintrees/) 2.2.0
+
+[synthesizer](https://pypi.org/project/synthesizer/) 0.2.0
+
+
+## How to setup
+
+> pip install pygame bintrees pyaudio synthesizer
+
+If installing `pyaudio` fails on Windows, you can also install the specific binary for your Python version / system architecture ![here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio).
+
+## How to run
+
+> python3.9 main.py
 
 ## Control
 
-W => Jump
+W / Space => Jump
 
 A => Left
 
@@ -32,7 +43,7 @@ R => Restart
 
 F8 => switch to debug mode
 
-## Resource
+## Resources
 
 https://pixel-frog.itch.io/pixel-adventure-1
 
