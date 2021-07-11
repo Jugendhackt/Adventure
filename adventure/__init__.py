@@ -261,6 +261,8 @@ class Adventure:
         for block in self.blocks:
             x = block['x']
             y = block['y']
+            if 'drawAbove' in block:
+                y -= 1
             w = block['w']
             h = block['h']
             init_x = x * self.block_size

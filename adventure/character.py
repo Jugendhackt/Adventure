@@ -153,9 +153,7 @@ class Character:
                 self.vy = -600
             elif block["collision"] == "collectMusic":
                 adventure.default.sound_master.add_rhythm_beat(block["musicID"])
-
-                del adventure.default.world[ block["y"] ] [block["x"]]
-                del adventure.default.blocks[b_id]
+                block["draw"] = "hidden"
 
         if "transport" in block:
             adventure.default.load_level(block["transport"])
