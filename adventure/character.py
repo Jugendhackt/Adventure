@@ -100,9 +100,6 @@ class Character:
         else:
             s = adventure.default.texture.get_texture(self.sprite, r)
         canvas.blit(s, (self.x, self.y))
-        if self.target is not None:
-            x, y = self.target
-            pygame.draw.rect(adventure.default.canvas, (100, 0, 0), (x * 32, y * 32, 32, 32))
 
     def get_current_block(self):
         block_size = adventure.default.block_size
@@ -143,8 +140,6 @@ class Character:
             if b is not None and flag is False:
                 self.target = block
                 flag = True
-                x, y = block
-                pygame.draw.rect(adventure.default.canvas, (0, 100, 0), (x * 32, y * 32, 32, 32))
 
     def on_collision(self, b_id):
         block = adventure.default.blocks[b_id]
