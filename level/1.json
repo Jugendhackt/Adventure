@@ -296,23 +296,6 @@
       "y": 25,
       "w": 1,
       "h": 2
-    },
-    {
-      "name": "t1",
-      "draw": "fill",
-      "transport": "2.json",
-      "x": 74,
-      "y": 26,
-      "w": 1,
-      "h": 1,
-      "prob": 101,
-      "gen": [
-        {
-          "x": 0,
-          "y": -2,
-          "key": "teleport"
-        }
-      ]
     }
   ],
   "camera_background": [
