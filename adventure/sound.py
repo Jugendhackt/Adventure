@@ -1,7 +1,14 @@
 import threading
 import time
+import numpy as np
 
 from synthesizer import Player, Synthesizer, Waveform
+
+# For debug
+import sys
+np.set_printoptions(threshold=sys.maxsize)
+
+
 
 def threaded(fn):
     def wrapper(*args, **kwargs):
@@ -60,7 +67,16 @@ class SoundMaster:
     @threaded
     def play_sound(self, sound: Sound):
         synthesizer = Synthesizer(osc1_waveform=sound.waveform, osc1_volume=sound.volume, use_osc2=False)
-        self.player.play_wave(synthesizer.generate_constant_wave(sound.note, sound.duration))
+        sound_wave = synthesizer.generate_constant_wave(sound.note, sound.duration)
+        envScale = np.array([float(1)]*len(sound_wave))
+        startingpart = int(len(envScale)/20)
+        for i in range(0,startingpart):
+            envScale[i]*= float(i)/startingpart
+            envScale[len(envScale)-startingpart+i]*= (startingpart-float(i))/startingpart
+
+        sound_wave *= envScale
+        print(sound_wave)
+        self.player.play_wave(sound_wave)
 
 if __name__ == "__main__":
     sm = SoundMaster()
