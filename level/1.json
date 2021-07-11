@@ -2,7 +2,7 @@
   "worldCol": 75,
   "worldRow": 30,
   "blockSize": 32,
-  "scale": 0.8,
+  "scale": 0.75,
   "blocks": [
     {
       "name": "t1",
